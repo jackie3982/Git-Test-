@@ -23,11 +23,21 @@ using namespace std;
  */
 int sum(int n);
 
+/**
+ * Takes user entered number and finds the Product of the 1 to n
+ *
+ * @param int n User entered number
+ * @pre User entered a number for n
+ * @return int Product of 1 to n
+ *
+ */
+int product(int n);
+
 int main() {
   int n = 0;
   cout << "Hello World!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n" << "Enter a number pls.\n";
   cin >> n;
-  cout << endl << sum(n) << endl;
+  cout << "The sum is: " << sum(n) << endl << "The product is: " << product(n) << endl;
   
   return 0;
 }
@@ -39,3 +49,13 @@ int sum(int n){
   }
   return total;
 }
+
+int product(int n){
+  int total = 1;
+  for( int i = 1; i < n; i++){
+    total *= i;
+  }
+  return total;
+}
+
+
